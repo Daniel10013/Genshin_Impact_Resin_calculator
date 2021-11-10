@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="css" rel="stylesheet" href="css/sayu.css">
+        <link rel="shortcut icon" href="css/img/others/resinicon.png" type="image/x-icon">
+        <title>Resin calculator</title>
+    </head>
+    <body onload="load_theme()">
+        <!-- navigation bar -->
+        <nav>
+            <img id="char_nav"src="css/img/sayu/sayuicon.png" alt="">
+            <p>Genshin resin calculator</p>
+            
+            <select onchange="theme()" id="selection">
+                <option value="">Theme</option>
+                <option value="sayu">Sayu</option>
+                <option value="klee" >Klee</option>
+                <option value="fischl" >Fischl</option>
+                <option value="keqing" >Keqing</option>
+                <option value="kokomi" >Kokomi</option>
+                <option value="yoimiya" >Yoimiya</option>
+            </select>
+        </nav>
+
+        <div id="main">
+            <!-- first section with text-->
+            <section id="first">
+                <h1>This site is a simple resin calculator</h1>
+                <p>With this site you will know the time when you're resin will be stacked</p>
+                <p>You can also know the time that will be when your resin is stacked</p>
+                <h2 id="question">- How do I see how much resin I have?</h2>
+                <p>Well that's a weird question, seeing that you spend it every day (I think)</p>
+                <p id="parag">But, if you don't know how to do it, here it is:</p>
+                <img src="css/img/others/resin.png" alt="where is your resin">
+                <p>All you need to do is open your map and, there it is!</p>
+                <p>Your resin number will be at the top of the map</p>
+                <p>After that you just need to insert your resin number in the text box</p>
+                <p id="obs">*The values here aren't exacts, but good approximations</p>
+            </section>
+
+            <!-- second section with the inputs -->
+            <section id="second">
+                <input placeholder="How much resin do you have now?" type="number" step="number" id="resin" name="resin" min="0" max="160">
+                <input type="submit" id="send" name="submit" onclick="print_info()" value="Calculate">
+                <h1 id="message"></h1>
+                <h1 for="hours" id="time_stack"></h1>
+                <h1 id="actual_time"></h1>
+                <h1 id="time_when_stack"></h1>
+                <div id="pics">
+                    <img id="char_pic1"src="css/img/sayu/sayuimg1.png">
+                    <img id="char_pic2"src="css/img/sayu/sayuimg2.png">
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div id="dc_box">
+                <img id="dc" src="css/img/others/dc.png" alt="">
+                <p>Macintosh1984_#4197</p>
+            </div>
+            <div id="gitmessage">
+                <p>This site don't have mobile adaptation</p>
+                <p>This site is for free use for everyone</p>
+                <p>If you want to edit it, or see the code, just get the files in the GitHub page</p>
+            </div>
+            <a href="https://github.com/Macintosh-1984/Resin_calculator.git" target="_blank"><img id="gitimg" src="css/img/others/github.png" alt=""></a>
+        </footer>
+    </body>
+
+    <!-- algorithm that makes the calculation -->
+    <script src="js/algorithm.js"></script>
+    <!-- others Javascript funcionts -->
+    <script src="js/other.js"></script>
+</html>
+
